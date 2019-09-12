@@ -1,6 +1,10 @@
 destinations = ["Paris, France",
                 "Shanghai, China",
                 "Los Angeles, USA",
-                "Såo Paulo, Brazil",
+                "Sao Paulo, Brazil",
                 "Cairo, Egypt"]
 test_traveler = ["Erin Wilkes", "Shanghai, China", ['jistorical site', 'art']]
+
+def get_destination_index(destination):
+  destination_index = destinations.index(destination)
+  return destination_index
