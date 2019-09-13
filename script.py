@@ -11,5 +11,8 @@ def get_destination_index(destination):
 
 def get_traveler_location(traveler):
   traveler_destination = traveler[1]
+  traveler_destination_index = get_destination_index(traveler_destination)
+  return traveler_destination_index
 
-traveler_destination_index = get_destination_index(traveler_destination)
+test_destination_index = get_traveler_location(test_traveler)
+print(test_destination_index)
