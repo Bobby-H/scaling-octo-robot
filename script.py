@@ -20,9 +20,29 @@ def get_traveler_location(traveler):
 def add_attraction(destination, attraction):
   try:
     destination_index = get_destination_index(destination)
-    attractions_for_destination = destination_index[destination_index].append(attraction)
+    attractions_for_destination = attractions[destination_index].append(attraction)
   except SyntaxError:
     return
 
-test_destination_index = get_traveler_location(test_traveler)
+add_attraction('Los Angeles, USA', ['Venice Beach', ['beach']])
+add_attraction("Paris, France", ["the Louvre", ["art", "museum"]])
+add_attraction("Paris, France", ["Arc de Triomphe", ["historical site", "monument"]])
+add_attraction("Shanghai, China", ["Yu Garden", ["garden", "historcical site"]])
+add_attraction("Shanghai, China", ["Yuz Museum", ["art", "museum"]])
+add_attraction("Shanghai, China", ["Oriental Pearl Tower", ["skyscraper", "viewing deck"]])
+add_attraction("Los Angeles, USA", ["LACMA", ["art", "museum"]])
+add_attraction("Sao Paulo, Brazil", ["Sao Paulo Zoo", ["zoo"]])
+add_attraction("Sao Paulo, Brazil", ["Patio do Colegio", ["historical site"]])
+add_attraction("Cairo, Egypt", ["Pyramids of Giza", ["monument", "historical site"]])
+add_attraction("Cairo, Egypt", ["Egyptian Museum", ["museum"]])
+
+def find_attractions(destination, interests):
+  destination_index = get_destination_index(destination)
+  attractions_in_the_city = attractions[destination_index]
+  attractions_with_interest = []
+
+  for attraction in attractions_in_city:
+    possible_attraction = attraction
+    attraction_tags = attraction[1]
+
 print(attractions)
