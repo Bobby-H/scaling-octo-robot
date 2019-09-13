@@ -5,6 +5,8 @@ destinations = ["Paris, France",
                 "Cairo, Egypt"]
 test_traveler = ["Erin Wilkes", "Shanghai, China", ['historical site', 'art']]
 
+attractions = [[] for destination in destinations]
+
 def get_destination_index(destination):
   destination_index = destinations.index(destination)
   return destination_index
@@ -15,4 +17,4 @@ def get_traveler_location(traveler):
   return traveler_destination_index
 
 test_destination_index = get_traveler_location(test_traveler)
-print(test_destination_index)
+print(attractions)
